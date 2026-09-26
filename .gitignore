@@ -1,0 +1,10 @@
+# Binaries and intermediate build artifacts
+**/bin/
+*.class
+*.dex
+*.apk.idsig
+*.pyc
+__pycache__/
+
+# Unaligned intermediate packages
+**/unaligned.apk
