@@ -43,8 +43,8 @@
 | **95th Percentile Frame Time** | < 14.0 ms | 8.0 ms | 8.0 ms | 8.2 ms | +0.2 ms |
 | **99th Percentile Frame Time** | < 16.6 ms | 10.0 ms | 10.0 ms | 9.7 ms | -0.3 ms |
 | **Janky Frame Percentage** | < 1.0% | 0.00% (0 / 316) | 0.00% | 0.00% (0 / 938) | 0.00% |
-| **Cold App Launch (Settings)**| < 350 ms | 338 ms (median) | 338 ms | 338 ms (median, N=10) | 0.0 ms |
-| **Warm App Resume** | < 80 ms | 60.5 ms (median) | 60.5 ms | 60.5 ms (median, N=10) | 0.0 ms |
+| **Cold App Launch (Settings)**| < 250.0 ms (Historical Target) | 338 ms (median) | 338 ms | 337.0 ms (median, N=10) | NOT MET (+87.0 ms) |
+| **Warm App Resume** | < 80.0 ms | 60.5 ms (median) | 60.5 ms | 60.5 ms (median, N=10) | PASS (-19.5 ms) |
 | **Launcher3 Process PSS** | < 120 MB | 80.05 MB | 80.05 MB | 83.00 MB | +2.95 MB |
 | **SystemUI Process PSS** | < 130 MB | 101.84 MB | 101.84 MB | 101.84 MB | 0.0 MB |
 | **CPU Idle Capacity** | > 90% | 98.0% | 98.0% | 97.4% | -0.6% |
