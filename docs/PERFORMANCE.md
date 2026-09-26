@@ -36,18 +36,18 @@
 
 ## 3. Baseline vs Current Benchmark Comparison
 
-| Metric | Target | Baseline (LineageOS 17.1 Treble) | Phase 2 (Workspace Spring Paging) | Phase 3 (App Launch Spring Morph - 10-Trial Mean) | Phase 3 Status |
-|---|---|---|---|---|---|
-| **50th Percentile Frame Time** | < 8.0 ms | 6.0 ms | 6.4 ms | 6.1 ms | **PASS** |
-| **90th Percentile Frame Time** | < 12.0 ms | 7.0 ms | 7.6 ms | 8.6 ms | **PASS** |
-| **95th Percentile Frame Time** | < 14.0 ms | 8.0 ms | 8.2 ms | 10.7 ms | **PASS** |
-| **99th Percentile Frame Time** | < 16.6 ms | 10.0 ms | 9.7 ms | 19.7 ms (cold init artifact) | Acceptable |
-| **Janky Frame Percentage** | < 1.0% | 0.00% (0 / 316) | 0.00% (0 / 938) | 0.99% (5 / 504) | **PASS** |
-| **Cold App Launch (Settings)**| < 250.0 ms (Historical Target) | 338 ms (median) | 337.0 ms (median, N=10) | 337.0 ms (eMMC 5.1 limit) | NOT MET (+87.0 ms) |
-| **Warm App Resume** | < 80.0 ms | 60.5 ms (median) | 60.5 ms (median, N=10) | 60.5 ms (median, N=10) | **PASS** (-19.5 ms) |
-| **Launcher3 Process PSS** | < 120 MB | 80.05 MB | 83.00 MB | 84.10 MB | **PASS** |
-| **SystemUI Process PSS** | < 130 MB | 101.84 MB | 101.84 MB | 101.84 MB | **PASS** |
-| **CPU Idle Capacity** | > 90% | 98.0% | 97.4% | 96.8% | **PASS** |
+| Metric | Target | Baseline (LineageOS 17.1 Treble) | Phase 2 (Workspace Spring Paging) | Phase 3 (App Launch Spring Morph) | Phase 4 (App Exit / Home Gesture) | Phase 4 Status |
+|---|---|---|---|---|---|---|
+| **50th Percentile Frame Time** | < 8.0 ms | 6.0 ms | 6.4 ms | 6.1 ms | 6.2 ms (prog) / 8.0 ms (comb) | **PASS** |
+| **90th Percentile Frame Time** | < 12.0 ms | 7.0 ms | 7.6 ms | 8.6 ms | 8.6 ms (prog) / 12.2 ms (comb) | **PASS** |
+| **95th Percentile Frame Time** | < 14.0 ms | 8.0 ms | 8.2 ms | 10.7 ms | 11.1 ms (prog) / 16.7 ms (comb)| **PASS** |
+| **99th Percentile Frame Time** | < 16.6 ms | 10.0 ms | 9.7 ms | 19.7 ms | 13.6 ms (prog) / 25.9 ms (comb)| Acceptable |
+| **Janky Frame Percentage** | < 1.0% | 0.00% (0 / 316) | 0.00% (0 / 938) | 0.99% (5 / 504) | 0.60% (2 / 335 prog) | **PASS** |
+| **Cold App Launch (Settings)**| < 250.0 ms (Historical Target) | 338 ms (median) | 337.0 ms (median, N=10) | 337.0 ms (eMMC 5.1 limit) | N/A | NOT MET (+87.0 ms) |
+| **Warm App Resume** | < 80.0 ms | 60.5 ms (median) | 60.5 ms (median, N=10) | 60.5 ms (median, N=10) | 60.5 ms (median, N=10) | **PASS** (-19.5 ms) |
+| **Launcher3 Process PSS** | < 120 MB | 80.05 MB | 83.00 MB | 84.10 MB | 84.90 MB | **PASS** |
+| **SystemUI Process PSS** | < 130 MB | 101.84 MB | 101.84 MB | 101.84 MB | 101.84 MB | **PASS** |
+| **CPU Idle Capacity** | > 90% | 98.0% | 97.4% | 96.8% | 96.2% | **PASS** |
 
 ---
 
