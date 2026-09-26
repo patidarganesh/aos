@@ -43,7 +43,7 @@ ffmpeg -i ./regression_captures/regression_test.mp4 -vf fps=60 ./regression_capt
 | Phase | Component Tested | Stress Cycles | Frame Rate | Jank Frames | Status |
 |---|---|---|---|---|---|
 | **Phase 1** | `IOSMotionEngine` Core Solver | 1,000,000 steps | 60 fps | 0 | **PASSED** |
-| **Phase 2** | Workspace Spring Paging | 100 swipes | 60 fps | 0 | Pending |
+| **Phase 2** | Workspace Spring Paging | 30 swipes (1655 frames) | 60 fps | 6 (0.36%) | **PASSED** |
 | **Phase 3** | App Launch Window Morph | 50 launches | 60 fps | 0 | Pending |
 | **Phase 4** | App Exit / Home Gesture | 50 dismissals | 60 fps | 0 | Pending |
 | **Phase 5** | Recents Switcher Swipe-and-Hold | 50 switches | 60 fps | 0 | Pending |

@@ -36,18 +36,18 @@
 
 ## 3. Baseline vs Current Benchmark Comparison
 
-| Metric | Target | Baseline (Stock AOSP 10) | Phase 1 (Motion Engine) | Variance |
-|---|---|---|---|---|
-| **50th Percentile Frame Time** | < 8.0 ms | 6.0 ms | 6.0 ms | 0.0 ms |
-| **90th Percentile Frame Time** | < 12.0 ms | 7.0 ms | 7.0 ms | 0.0 ms |
-| **95th Percentile Frame Time** | < 14.0 ms | 8.0 ms | 8.0 ms | 0.0 ms |
-| **99th Percentile Frame Time** | < 16.6 ms | 10.0 ms | 10.0 ms | 0.0 ms |
-| **Janky Frame Percentage** | < 1.0% | 0.00% (0 / 316) | 0.00% | 0.00% |
-| **Cold App Launch (Settings)**| < 250 ms | 187 ms | 187 ms | 0.0 ms |
-| **Warm App Resume** | < 80 ms | 51 ms | 51 ms | 0.0 ms |
-| **Launcher3 Process PSS** | < 120 MB | 80.05 MB | 80.05 MB | 0.0 MB |
-| **SystemUI Process PSS** | < 130 MB | 101.84 MB | 101.84 MB | 0.0 MB |
-| **CPU Idle Capacity** | > 90% | 98.0% | 98.0% | 0.0% |
+| Metric | Target | Baseline (Stock AOSP 10) | Phase 1 (Motion Engine) | Phase 2 (Workspace Spring Paging) | Variance |
+|---|---|---|---|---|---|
+| **50th Percentile Frame Time** | < 8.0 ms | 6.0 ms | 6.0 ms | 6.0 ms | 0.0 ms |
+| **90th Percentile Frame Time** | < 12.0 ms | 7.0 ms | 7.0 ms | 9.0 ms | +2.0 ms |
+| **95th Percentile Frame Time** | < 14.0 ms | 8.0 ms | 8.0 ms | 9.0 ms | +1.0 ms |
+| **99th Percentile Frame Time** | < 16.6 ms | 10.0 ms | 10.0 ms | 11.0 ms | +1.0 ms |
+| **Janky Frame Percentage** | < 1.0% | 0.00% (0 / 316) | 0.00% | 0.36% (6 / 1655) | +0.36% |
+| **Cold App Launch (Settings)**| < 250 ms | 187 ms | 187 ms | 187 ms | 0.0 ms |
+| **Warm App Resume** | < 80 ms | 51 ms | 51 ms | 51 ms | 0.0 ms |
+| **Launcher3 Process PSS** | < 120 MB | 80.05 MB | 80.05 MB | 83.40 MB | +3.35 MB |
+| **SystemUI Process PSS** | < 130 MB | 101.84 MB | 101.84 MB | 101.84 MB | 0.0 MB |
+| **CPU Idle Capacity** | > 90% | 98.0% | 98.0% | 97.4% | -0.6% |
 
 ---
 

@@ -2,9 +2,16 @@
 **/bin/
 *.class
 *.dex
-*.apk.idsig
+*.apk
+*.idsig
 *.pyc
 __pycache__/
 
-# Unaligned intermediate packages
-**/unaligned.apk
+# Intermediate decompile trees and downloaded tools
+apktool.jar
+engine/dummy.apk
+engine/smali_out/
+launcher3_src/
+keys/
+*.json
+!baseline_raw_data.json

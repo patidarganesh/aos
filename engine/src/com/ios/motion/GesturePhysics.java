@@ -63,4 +63,18 @@ public final class GesturePhysics {
         }
         return Math.signum(rawDelta) * (absDelta - touchSlop);
     }
+
+    /**
+     * Drop-in replacement for Launcher3's OverScroll.dampedScroll(amount, max).
+     * Applies iOS rubber band resistance equation.
+     */
+    public static int dampedScroll(float amount, int max) {
+        if (amount == 0.0f || max <= 0) {
+            return 0;
+        }
+        float sign = Math.signum(amount);
+        double absAmount = Math.abs(amount);
+        double clamped = rubberBandClamp(absAmount, (double) max, DEFAULT_RUBBER_BAND_COEFFICIENT);
+        return (int) Math.round(sign * clamped);
+    }
 }

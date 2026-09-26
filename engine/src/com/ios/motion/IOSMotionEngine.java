@@ -58,6 +58,43 @@ public final class IOSMotionEngine {
     public SpringSolver getSliderBounceSolver() { return sliderBounceSolver; }
 
     /**
+     * High-speed static spring interpolation for Workspace page transitions.
+     * Evaluates damped harmonic spring at t = input * MotionConfig.WORKSPACE_PAGE_RESPONSE.
+     */
+    public static float getWorkspacePageInterpolation(float input) {
+        if (input <= 0.0f) return 0.0f;
+        if (input >= 1.0f) return 1.0f;
+        IOSMotionEngine engine = getInstance();
+        double t = input * MotionConfig.WORKSPACE_PAGE_RESPONSE;
+        SpringSolver.SpringState state = engine.workspacePageSolver.solve(t, -1.0, 0.0);
+        return (float) (1.0 + state.position);
+    }
+
+    /**
+     * High-speed static spring interpolation for App Launch transitions.
+     */
+    public static float getAppLaunchInterpolation(float input) {
+        if (input <= 0.0f) return 0.0f;
+        if (input >= 1.0f) return 1.0f;
+        IOSMotionEngine engine = getInstance();
+        double t = input * MotionConfig.APP_LAUNCH_RESPONSE;
+        SpringSolver.SpringState state = engine.appLaunchSolver.solve(t, -1.0, 0.0);
+        return (float) (1.0 + state.position);
+    }
+
+    /**
+     * High-speed static spring interpolation for App Exit / Home transitions.
+     */
+    public static float getAppExitInterpolation(float input) {
+        if (input <= 0.0f) return 0.0f;
+        if (input >= 1.0f) return 1.0f;
+        IOSMotionEngine engine = getInstance();
+        double t = input * MotionConfig.APP_EXIT_RESPONSE;
+        SpringSolver.SpringState state = engine.appExitSolver.solve(t, -1.0, 0.0);
+        return (float) (1.0 + state.position);
+    }
+
+    /**
      * Creates a Choreographer-driven spring transition controller.
      */
     public TransitionController createTransition(TransitionController.OnSpringUpdateListener listener) {
